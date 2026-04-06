@@ -1,0 +1,6 @@
+{
+  "SecQ AI Platform Login Page": {
+    "Email ID": "#login_user_id",
+    "Password": "input[name=\"password\"]"
+  }
+}
