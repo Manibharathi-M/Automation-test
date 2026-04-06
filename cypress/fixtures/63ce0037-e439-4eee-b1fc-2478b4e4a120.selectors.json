@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "logoutButton": ".persistent-nav .btn-logout",
+    "navigationMenu": ".persistent-nav"
+  },
+  "LogoutConfirmation": {
+    "confirmationModalTitle": ".modal-title",
+    "confirmLogoutButton": "button:contains('Yes, Logout')"
+  },
+  "LoginPage": {
+    "usernameInput": "#login_user_id",
+    "passwordInput": "input[name=\"password\"]",
+    "submitButton": "button[type=\"submit\"]"
+  }
+}
