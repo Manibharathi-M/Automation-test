@@ -1,0 +1,14 @@
+{
+  "name": "8a84aca8-d2e0-45cc-9b30-68b9aa02deda",
+  "version": "1.0.0",
+  "description": "Auto-generated Cypress test suite by TestQ",
+  "scripts": {
+    "test": "npx cypress run",
+    "test:headed": "npx cypress run --headed",
+    "test:open": "npx cypress open"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}
