@@ -7,38 +7,28 @@ Cypress.Commands.add('login', (email, password) => {
   cy.get(selectors.LoginPage.loginButton).click();
 });
 
-Cypress.Commands.add('verifyLightModeStyles', () => {
-  // Verify background and text colors for general UI elements
-  cy.get('body').should('have.css', 'background-color', 'rgb(255, 255, 255)'); // Assuming white background for light theme
-  cy.get('body').should('have.css', 'color', 'rgb(0, 0, 0)'); // Assuming black text for light theme
+Cypress.Commands.add('verifyLogin', () => {
+  cy.url().should('include', '/dashboard'); // Assuming dashboard is the post-login URL
+});
 
-  // Verify buttons styling
-  cy.get('button').each(($button) => {
-    cy.wrap($button).should('have.css', 'background-color', 'rgb(255, 255, 255)'); // Example: light background for buttons
-    cy.wrap($button).should('have.css', 'color', 'rgb(0, 0, 0)'); // Example: dark text for buttons
+Cypress.Commands.add('verifyNavigationMenu', () => {
+  cy.get(selectors.DashboardPage.dashboardLink).should('be.visible');
+  cy.get(selectors.DashboardPage.knowledgeBaseLink).should('be.visible');
+  cy.get(selectors.DashboardPage.questionnairesLink).should('be.visible');
+  cy.get(selectors.DashboardPage.systemTasksLink).should('be.visible');
+  cy.get(selectors.DashboardPage.usageReportsLink).should('be.visible');
+  cy.get(selectors.DashboardPage.faqSupportLink).should('be.visible');
+});
+
+Cypress.Commands.add('verifyNavigationMenuFixed', () => {
+  // For verifying fixed navigation, we might need to scroll and check its position.
+  // This is a basic check for visibility after scrolling.
+  cy.get('body').then(($body) => {
+    // Scroll down to ensure content is scrollable
+    cy.scrollTo('bottom');
+    cy.get(selectors.DashboardPage.dashboardLink).should('be.visible'); // Check visibility after scroll
+    // Scroll up
+    cy.scrollTo('top');
+    cy.get(selectors.DashboardPage.dashboardLink).should('be.visible'); // Check visibility after scroll up
   });
-
-  // Verify input fields styling
-  cy.get('input[type="text"], input[type="password"], input[type="email"]').each(($input) => {
-    cy.wrap($input).should('have.css', 'background-color', 'rgb(255, 255, 255)'); // Example: light background for inputs
-    cy.wrap($input).should('have.css', 'border-color', 'rgb(200, 200, 200)'); // Example: subtle border color
-  });
-
-  // Verify navigation menu styling
-  cy.get(selectors.DashboardPage.leftNavigationMenu).should('have.css', 'background-color', 'rgb(248, 249, 250)'); // Example: light grey background for sidebar
-  cy.get(selectors.DashboardPage.leftNavigationMenu).find('a').each(($link) => {
-    cy.wrap($link).should('have.css', 'color', 'rgb(33, 37, 41)'); // Example: dark text for nav links
-  });
-
-  // Verify heading and text styling
-  cy.get('h1, h2, h3, p, label').each(($textElement) => {
-    cy.wrap($textElement).should('have.css', 'color', 'rgb(33, 37, 41)'); // Example: dark text for headings and paragraphs
-  });
-
-  // Verify icons are discernible (this is a more complex visual check, often relying on contrast)
-  // Example: checking for presence and visibility of icons in specific areas
-  cy.get('.icon').should('be.visible');
-
-  // Verify modal styling consistency
-  cy.get('.modal').should('have.css', 'background-color', 'rgb(255, 255, 255)'); // Example: white background for modals
 });
