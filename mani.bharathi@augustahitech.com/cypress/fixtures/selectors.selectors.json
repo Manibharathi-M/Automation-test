@@ -1,0 +1,10 @@
+{
+  "LoginPage": {
+    "usernameField": "#login_user_id",
+    "passwordField": "input[name=\"password\"]",
+    "submitButton": "button[type=\"submit\"]"
+  },
+  "DashboardPage": {
+    "menuBar": "div[class*='flex h-full']"
+  }
+}
