@@ -1,17 +1,15 @@
 {
   "LoginPage": {
-    "emailIdInput": "#login_user_id",
-    "passwordInput": "input[name=\"password\"]",
+    "emailIdInput": "#email_id",
+    "passwordInput": "#password",
     "loginButton": "button[type=\"submit\"]"
   },
   "DashboardPage": {
-    "dashboardLink": "[data-cy='dashboard-link']",
-    "knowledgeBaseLink": "[data-cy='knowledge-base-link']",
-    "questionnairesLink": "[data-cy='questionnaires-link']",
-    "systemTasksLink": "[data-cy='system-tasks-link']",
-    "usageReportsLink": "[data-cy='usage-reports-link']",
-    "faqSupportLink": "[data-cy='faq-support-link']",
-    "mainContentArea": "main",
-    "leftNavigationMenu": ".left-sidebar"
+    "dashboardLink": "a[href=\"/dashboard\"]",
+    "knowledgeBaseLink": "a[href=\"/knowledge-base\"]",
+    "questionnairesLink": "a[href=\"/questionnaires\"]",
+    "systemTasksLink": "a[href=\"/system-tasks\"]",
+    "usageReportsLink": "a[href=\"/usage-reports\"]",
+    "faqSupportLink": "a[href=\"/faq\"]"
   }
 }
