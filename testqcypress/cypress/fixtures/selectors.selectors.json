@@ -1,0 +1,16 @@
+{
+  "LoginPage": {
+    "Email ID input field": "#login_user_id",
+    "Password input field": "input[name=\"password\"]",
+    "Login button": "button[type=\"submit\"]"
+  },
+  "DashboardPage": {
+    "Navigation menu": ".ant-menu.ant-menu-dark.ant-menu-inline",
+    "Dashboard menu item": ".ant-menu-item[title='Dashboard']",
+    "Knowledge Base menu item": ".ant-menu-item[title='Knowledge Base']",
+    "Questionnaires menu item": ".ant-menu-item[title='Questionnaires']",
+    "System Tasks menu item": ".ant-menu-item[title='System Tasks']",
+    "Usage Reports menu item": ".ant-menu-item[title='Usage Reports']",
+    "FAQ/Support menu item": ".ant-menu-item[title='FAQ/Support']"
+  }
+}
