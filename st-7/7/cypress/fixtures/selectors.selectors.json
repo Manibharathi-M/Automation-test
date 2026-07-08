@@ -1,0 +1,7 @@
+{
+  "LoginPage": {
+    "Email ID input field": "#login_user_id",
+    "Password input field": "input[name=\"password\"]",
+    "Login button": "button[type=\"submit\"]"
+  }
+}
